@@ -7,8 +7,8 @@
 // https://leetcode.com/problems/reverse-integer/description/
 // Medium
 ////////////////////////
-// Runtime : 3ms Beats 28.07%
-// Memory  : 8.76MB Beats 6.48%
+// Runtime : 0ms Beats 100%
+// Memory  : 8.91MB Beats 5.17%
 ////////////////////////
 
 
@@ -24,7 +24,8 @@ public:
             x *= -1;
             negative = true;
         }
-        // Creates the example array
+
+        // Creates the array of numbers
         // Builds the array backwards 123 -> {3,2,1}
         std::vector<int> arr;
         while (x > 0) {
@@ -33,14 +34,18 @@ public:
         }
 
         // long long allows more data to be stored than a regular int
+
         int size = arr.size(); // Size of the input array built
-        long long max = 2147483647; // Max integer size
+        
+        // FIX //
+        // I changed the int max to long long max
+        int max = 2147483647; // Max integer size
+
         long long flipped = 0; // Stores the flipped integer
         long long multiplier = 1; // For placing the integer in the proper place
 
         // Iterates through all digits of the array backwards
         for (int i=(arr.size()-1); i >= 0 ; --i) {
-            //  // Checks for numbers that would exceed 32 bit integers
             // Adds the new flipped integer properly
             flipped += (arr[i] * multiplier);
 
@@ -48,11 +53,13 @@ public:
             multiplier *= 10;
         }
 
+        // Makes sure flipped number is less than the max available space
         if (flipped > max) return 0;
 
         // If the number was originally negative
         if (negative) { flipped *= -1; }
 
+        // Converts the long long back into an integer
         int final = (int)flipped;
 
         return final;
