@@ -1,0 +1,23 @@
+#include <vector>
+#include <iostream>
+#include <cassert>
+
+////////////////////////
+// # 
+// Name
+// Link
+// Difficulty
+////////////////////////
+// Runtime : Xms Beats X%
+// Memory  : XMB Beats X%
+////////////////////////
+
+// code here
+
+////////////////////////
+// END 
+////////////////////////
+
+int main() {
+    //test here
+}
