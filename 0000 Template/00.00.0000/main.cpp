@@ -20,4 +20,5 @@
 
 int main() {
     //test here
+    std::cout << std::endl << "All tests passed!" << std::endl << std::endl;
 }
