@@ -3,14 +3,16 @@
 #include <cassert>
 
 ////////////////////////
-// # 
-// Name
-// Link
-// Difficulty
+// # 3675
+// Minimum Operations to Transform String
+// https://leetcode.com/problems/minimum-operations-to-transform-string/description/
+// Medium
 ////////////////////////
-// Runtime : Xms Beats X%
-// Memory  : XMB Beats X%
+// Runtime : 41ms Beats 42.10%
+// Memory  : 59.79MB Beats 94.74%
 ////////////////////////
+
+using std::string;
 
 class Solution {
 public:
@@ -48,5 +50,11 @@ public:
 ////////////////////////
 
 int main() {
-    //test here
+    Solution test;
+    assert(test.minOperations("yz") == 2);
+    assert(test.minOperations("a") == 0);
+    assert(test.minOperations("aaaaaa") == 0);
+    assert(test.minOperations("aaaaaaaaaa") == 0);
+    assert(test.minOperations("z") == 1);
+    std::cout << "All tests passed!" << std::endl;
 }
