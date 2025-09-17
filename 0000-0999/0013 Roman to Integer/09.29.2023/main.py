@@ -11,6 +11,7 @@
 def main():
     s = Solution()
     num = s.romanToInt("V")
+    print(num)
 
 class Solution:
     def romanToInt(self, s):
