@@ -9,6 +9,3 @@
  - The folder inside the problem number will be the date of completion
  - Numbers after date will be edits made on same date
  - The comments on the top will show "Beats xx.xx% of people"
-
-
-2024
